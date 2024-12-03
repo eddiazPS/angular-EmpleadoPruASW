@@ -1,0 +1,53 @@
+button {
+  float: right;
+  border: 200px;
+}
+
+.tramite {
+  height: 100px;
+  width: 300px;
+  float: left;
+  /* margin-bottom: 0; */
+}
+
+#div-contenedor-high{
+  height: 600px;
+}
+
+.contenedor-flex-colum-spac-btwee{
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-between;
+
+}
+
+.contenedor-row-center{
+  display: flex;
+  flex-direction: row ;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+p{
+  text-align: justify;
+
+}
+
+.p-tramite{
+  margin: 100px;
+  justify-content: left;
+  border: 200px;
+  padding: 27px;
+}
+
+
+
+/* .contenedor p {
+  margin-top: 4px;
+  margin-bottom: 0;
+  margin-top: 0;
+} */
+
