@@ -13,29 +13,30 @@ export class EmpleadoServiceService {
 
   constructor(private http: HttpClient) { }
 
+   empleado?:Empelado;
 
   getEmpleados():Observable<Empelado[]>{
     return this.http.get<Empelado[]>(`${this.baseUrl}/api/empleados`).pipe(
       tap(response => {
         let clientes = response as Empelado[];
-        console.log('empleado: Tap 1 C')
+        console.log('servicio empleado: Tap 1 C')
         clientes.forEach( empleado => {
           console.log(empleado.nombre);
         }
         )
-
       }),
-      // map(response => {
-      //   let empleados = response as Empelado[];
-
-      //   return empleados;
-      // }
-
-      // ),
       catchError (error => of ())
     );
   }
 
+
+datosEmpleadoIn(empleado:Empelado){
+  this.empleado=empleado;
+}
+
+datosEmpleadoOut():Empelado|undefined{
+  return this.empleado;
+}
 
 
 }

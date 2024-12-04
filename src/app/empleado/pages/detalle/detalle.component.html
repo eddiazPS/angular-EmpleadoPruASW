@@ -1,0 +1,31 @@
+<form autocomplete="off" [formGroup]="myForm">
+  <span class=" p-b-49">
+    empleado
+  </span>
+  <div class=" m-b-23">
+    <span>Identificacion</span>
+    <input type="email" formControlName="identificacion">
+  </div>
+  <div>
+    <span>Nombre</span>
+    <input type="text" formControlName="nombre">
+  </div>
+  <div>
+    <span>Edad</span>
+    <input type="text" formControlName="edad">
+  </div>
+  <div>
+    <span>FechaNacimiento</span>
+    <input [disabled]="isDisabled" type="text" formControlName="fechaNacimiento">
+  </div>
+
+
+</form>
+<div>
+  <button (click)="volver()">
+    Volver
+  </button>
+  <button (click)="editar()">
+    editar
+  </button>
+</div>
